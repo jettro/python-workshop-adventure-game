@@ -1,0 +1,56 @@
+### Adventure Game API Tests
+
+### Root endpoint documentation
+GET http://localhost:8000/
+
+### Start a new game
+POST http://localhost:8000/start
+Content-Type: application/json
+
+> {%
+    client.global.set("game_id", response.body.game_id);
+%}
+
+### Move North
+POST http://localhost:8000/move
+Content-Type: application/json
+
+{
+  "game_id": "{{game_id}}",
+  "direction": "N"
+}
+
+### Move East
+POST http://localhost:8000/move
+Content-Type: application/json
+
+{
+  "game_id": "{{game_id}}",
+  "direction": "E"
+}
+
+### Move South
+POST http://localhost:8000/move
+Content-Type: application/json
+
+{
+  "game_id": "{{game_id}}",
+  "direction": "S"
+}
+
+### Move West
+POST http://localhost:8000/move
+Content-Type: application/json
+
+{
+  "game_id": "{{game_id}}",
+  "direction": "W"
+}
+
+### Stop the game
+POST http://localhost:8000/stop
+Content-Type: application/json
+
+{
+  "game_id": "{{game_id}}"
+}

@@ -1,0 +1,14 @@
+# ignore the .venv folders
+**/.venv/
+
+# ignore the idea folders
+**/.idea
+
+# ignore .env files
+**/.env
+
+**/__pycache__/
+
+**/.DS_Store
+
+**/.ipynb_checkpoints/
