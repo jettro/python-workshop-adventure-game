@@ -314,7 +314,7 @@ The tips section contains a tip to find the exit using the compass.
 ## Create a Game class
 The Game class is the main class that will be used to run the game. You use the board to play, but now you add a score to the game.
 
-Create the Game class in game.py. In the init method, create the board with characters, height, and width.
+Create the Game class in a new file named <b>game.py</b>. In the init method, create the board with characters, height, and width.
 
 ```python
 import uuid
@@ -391,7 +391,7 @@ Print the score at the end of the game.
 
 ## Tips
 
-- Createa test for the random_location function.
+- Create a test for the random_location function.
 
 Below are some lines of code that you can use in your tests.
 

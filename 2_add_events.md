@@ -12,6 +12,8 @@ Events:
 - ExitFoundEvent: provide the row, column and a message 
 - GameEndedEvent: provide the message
 
+Create the GameEvent class in a new file named <b>events.py</b>.
+
 Make all events extend the GameEvent class. The property kw_only=True is needed to make the timestamp field keyword only. Without this, you cannot add fields without a default value after the field with a default value. Which is a problem for having the subclasses. This does mean you cannot create an instance of the class with positional initialization of parameters. Valid is GameEvent(score=10), not valid is GameEvent(10).  
 
 The ABC super class does nothing by itself, it is more a design intent that other classes should inherit from it.
@@ -36,7 +38,7 @@ class GameEvent(ABC):
 
 ## Connect event listeners and emit events
 
-Next, you are connecting the event listeners to the game and start emitting events. You need to initialise an array of event listeners, create a method to emit events. 
+Next, you are connecting the event listeners to the <b>game</b> class and start emitting events. You need to initialise an array of event listeners, create a method to emit events. 
 
 ```python
 from typing import Callable
@@ -93,5 +95,5 @@ class EventHandler:
 Next, register the event listener in the Game before starting the game with run.
 
 ### Assignments
-- Create the EventHandler class and register it in the Game.
+- Create the EventHandler class in events.py and register it in the Game.
 - Play the game and notice the events are saved to the file.
